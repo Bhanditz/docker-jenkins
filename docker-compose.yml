@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jenkins:
+    image: m3hran/jenkins:0.3.0
+    container_name: jenkins
+    restart: always
+    volumes:
+      - /u/data/jenkins-home:/jenkins
+      - ./resources/jenkins.default:/etc/default/jenkins
+    ports:
+      - 80:8080
+    network_mode: "bridge"
