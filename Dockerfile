@@ -1,4 +1,4 @@
-FROM m3hran/docker-baseimage:latest
+FROM m3hran/baseimage:latest
 MAINTAINER Martin Taheri <m3hran@gmail.com>
 LABEL Description="Jenkins CI Image"
 
