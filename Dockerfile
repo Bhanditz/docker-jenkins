@@ -19,6 +19,7 @@ RUN mkdir $JENKINS_HOME
 
 # Ensure Jenkins service startups
 COPY ./resources/jenkins_start.sh /etc/my_init.d/
+COPY ./resources/jenkins.default /etc/default/jenkins
 RUN chmod +x /etc/my_init.d/jenkins_start.sh
 
 EXPOSE 8080
