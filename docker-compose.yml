@@ -5,8 +5,10 @@ services:
     container_name: jenkins
     restart: always
     volumes:
-      - /u/data/jenkins-home:/jenkins
+      - /u/data/jenkins/data:/jenkins
+      - /u/data/jenkins/logs:/var/log/jenkins
       - ./resources/jenkins.default:/etc/default/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 80:8080
     network_mode: "bridge"

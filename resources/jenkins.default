@@ -9,7 +9,7 @@ JAVA=/usr/bin/java
 # arguments to pass to java
 
 # Allow graphs etc. to work even when an X server is present
-JAVA_ARGS="-Djava.awt.headless=true"
+JAVA_ARGS="-Djava.awt.headless=true Duser.timezone=America/New_York"
 
 #JAVA_ARGS="-Xmx256m"
 
@@ -34,7 +34,7 @@ JENKINS_HOME=/$NAME
 RUN_STANDALONE=true
 
 # log location.  this may be a syslog facility.priority
-JENKINS_LOG=$JENKINS_HOME/logs/$NAME.log
+JENKINS_LOG=$JENKINS_LOGS/$NAME.log
 #JENKINS_LOG=daemon.info
 
 # OS LIMITS SETUP
