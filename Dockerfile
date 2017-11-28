@@ -6,7 +6,8 @@ ENV JENKINS_HOME /jenkins
 ENV JENKINS_LOGS /var/log/jenkins
 
 # Install required jenkins and docker packages
-RUN clean_install.sh default-jdk apt-transport-https ca-certificates software-properties-common
+RUN clean_install.sh default-jdk apt-transport-https ca-certificates software-properties-common \
+    make
 
 
 # Install docker apt repo 
