@@ -4,6 +4,8 @@ services:
     image: m3hran/jenkins:0.3.0
     container_name: jenkins
     restart: always
+    env_file:
+      - ./resources/jenkins.env
     volumes:
       - /u/data/jenkins/data:/jenkins
       - /u/data/jenkins/logs:/var/log/jenkins

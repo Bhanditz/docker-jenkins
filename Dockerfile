@@ -34,9 +34,6 @@ RUN clean_install.sh jenkins
 RUN mkdir $JENKINS_HOME 
 RUN chown jenkins: $JENKINS_HOME $JENKINS_LOGS
 
-# Give jenkins permission to docker
-RUN usermod -aG docker jenkins
-
 # Ensure Jenkins service startups
 COPY ./resources/jenkins_start.sh /etc/my_init.d/
 COPY ./resources/jenkins.default /etc/default/jenkins

@@ -1,6 +1,6 @@
 NAME = m3hran/jenkins
-VERSION = 0.3.0
-C_NAME = jenkins
+VERSION = 0.4.0
+C_NAME = jenkins-$(VERSION)
 
 .PHONY: all build test tag_latest release install clean
 
