@@ -1,5 +1,5 @@
 NAME = m3hran/jenkins
-VERSION = 0.4.0
+VERSION = 0.4.1
 C_NAME = jenkins-$(VERSION)
 
 .PHONY: all build test tag_latest release install clean
@@ -14,6 +14,9 @@ clean:
 	
 install:
 	docker run -d --name $(C_NAME) $(NAME):$(VERSION)
+
+test: 
+	/bin/bash test.sh $(C_NAME)
 
 tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest
